@@ -45,10 +45,6 @@ public class Municipio implements Serializable {
     @Column(name = "nombre")
     private String nombre;
     
-    @Size(max = 50)
-    @Column(name = "codigo")
-    private String codigo;
-    
     @JoinColumn(name = "departamento_id", referencedColumnName = "departamento_id", insertable = false, updatable = false)
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Departamento departamento;
@@ -75,14 +71,6 @@ public class Municipio implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
     }
 
     public Departamento getDepartamento() {
