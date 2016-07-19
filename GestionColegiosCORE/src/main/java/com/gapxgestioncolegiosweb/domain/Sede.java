@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.gapxgestioncolegiosweb.domain;
 
 import java.io.Serializable;
@@ -41,9 +37,6 @@ public class Sede implements Serializable {
     @Column(name = "consecutivo")
     private BigInteger consecutivo;
     
-    @Column(name = "actual")
-    private Boolean actual;
-    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
@@ -79,14 +72,6 @@ public class Sede implements Serializable {
 
     public void setConsecutivo(BigInteger consecutivo) {
         this.consecutivo = consecutivo;
-    }
-
-    public Boolean getActual() {
-        return actual;
-    }
-
-    public void setActual(Boolean actual) {
-        this.actual = actual;
     }
 
     public String getNombre() {
