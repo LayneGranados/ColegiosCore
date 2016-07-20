@@ -40,9 +40,6 @@ public class Anio implements Serializable {
     @Column(name = "anio")
     private String anio;
     
-    @Column(name = "actual")
-    private Boolean actual;
-    
     @Lob
     @Size(max = 65535)
     @Column(name = "descripcion")
@@ -78,14 +75,6 @@ public class Anio implements Serializable {
 
     public void setAnio(String anio) {
         this.anio = anio;
-    }
-
-    public Boolean getActual() {
-        return actual;
-    }
-
-    public void setActual(Boolean actual) {
-        this.actual = actual;
     }
 
     public String getDescripcion() {
