@@ -5,6 +5,7 @@
  */
 package com.gapxgestioncolegiosweb.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -70,6 +71,7 @@ public class Periodo implements Serializable {
         this.id = id;
     }
 
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="UTC")
     public Date getFechaInicio() {
         return fechaInicio;
     }
@@ -78,6 +80,7 @@ public class Periodo implements Serializable {
         this.fechaInicio = fechaInicio;
     }
 
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd", timezone="UTC")
     public Date getFechaFin() {
         return fechaFin;
     }
